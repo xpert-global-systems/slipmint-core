@@ -1,4 +1,3 @@
-cat > tsconfig.json << 'EOF'
 {
   "compilerOptions": {
     "target": "ES2022",
@@ -9,8 +8,8 @@ cat > tsconfig.json << 'EOF'
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "verbatimModuleSyntax": false,
+    "moduleDetection": "force"
   },
   "include": ["src/**/*"]
 }
-EOF
