@@ -1,16 +1,19 @@
 cat > tsconfig.json << 'EOF'
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "outDir": "./dist",
-    "rootDir": "./src",
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "verbatimModuleSyntax": false
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "NodeNext",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true
   },
-  "include": ["src"]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
 EOF
